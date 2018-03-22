@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper标签要指定namespace属性，不然会报错，且mapper开发时设置为Mapper接口的全限定名-->
+<mapper namespace="com.zhihui.dao.UserDao">
+    <select id="findUserById" parameterType="int" resultType="com.zhihui.domain.User">
+        select * from user_t where id = #{id}
+    </select>
+    
+    <select id="findUserByUserName" parameterType="string" resultType="com.zhihui.domain.User">
+        select * from user_t where username = #{username}
+    </select>
+    <select id="findUserAll" resultType="com.zhihui.domain.User">
+        select * from user_t 
+    </select>
+    <insert id="insertUser" parameterType="com.zhihui.domain.User">
+        insert into user_t(username,password,age) values(#{username},#{password},#{age})
+    </insert>
+    <delete id="deleteUserById" parameterType="int">
+        delete from user_t where id=#{id}
+    </delete>
+    <update id="updateUserPassword" parameterType="com.zhihui.domain.User">
+        update user_t set password=#{password} where id=#{id}
+    </update>
+</mapper>
