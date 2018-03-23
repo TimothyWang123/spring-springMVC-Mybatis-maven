@@ -1,12 +1,11 @@
 <html>
-<script src="../js/login.js"></script>
+<%@ include file="header.jsp" %> 
+<script src="js/service/login.js"></script>
 <body>
-	<form action="test/login" method="post">
-		<table>
-			<tr>user:<input type="text" name="username" id="username" /></tr>
-			<tr>mima:<input type="text" name="password" id="password" /></tr>
-			<tr><input type="submit" onclick="login()"/></tr>
-		</table>
-	</form>
+	<div>
+		user:<input type="text" name="username" id="username" /><br>
+	    mima:<input type="text" name="password" id="password" /><br>
+	    <input type="submit" onclick="login()"/>
+	</div>
 </body>
 </html>
