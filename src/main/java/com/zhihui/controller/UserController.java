@@ -11,7 +11,7 @@ import com.zhihui.domain.User;
 import com.zhihui.service.impl.UserServiceImpl;
 
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/user")
 public class UserController {
 	
 	@Autowired  
