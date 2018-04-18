@@ -22,7 +22,7 @@ public class UserController {
 	private UserServiceImpl userService;
 	
 	/**
-	 * 登陆方法
+	 * 用户登陆
 	 * @param request
 	 * @return
 	 */
@@ -30,10 +30,10 @@ public class UserController {
 	@ResponseBody //如果你返回的东西不是jsp页面名字的话，不然一直去找这个jsp存不存在，人都气死
 	public Map<String,String> login(HttpServletRequest request){
 		String userName = request.getParameter("username");
-		String password = request.getParameter("password");
+		String passWord = request.getParameter("password");
 		User user = new User();
 		user.setUserName(userName);
-		user.setPassWord(password);
+		user.setPassWord(passWord);
 		boolean result = userService.checkUser(user);
 		Map<String,String> resultMap = new HashMap<String, String>();
 		if(result){
@@ -52,7 +52,7 @@ public class UserController {
 		return "/success";
 	}
 	
-	@RequestMapping("/toLoginFail")
+	@RequestMapping("/exit")
 	public String toLoginFail(){
 		
 		return "/fail";

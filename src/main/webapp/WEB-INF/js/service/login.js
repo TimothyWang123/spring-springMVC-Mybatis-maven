@@ -13,7 +13,7 @@ function login(){
 			if(data.result == "success"){
 				window.location.href = "user/toLoginSuccess.html";
 			}else{
-				window.location.href = "user/toLoginFail.html";
+				window.location.href = "user/exit.html";
 			}
 		},
 		error:function(XMLHttpRequest, textStatus, errorMsg){

@@ -1,3 +1,5 @@
-<%@ taglib prefix="c"uri="http://java.sun.com/jstl/core" %> 
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
+﻿<!DOCTYPE html>
+<html>
+<head>
 <script src="js/jquery/jquery.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
